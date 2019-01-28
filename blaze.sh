@@ -14,12 +14,13 @@ nocol='\033[0m'
 #make kernel compiling dir...
 mkdir -p outdir
 
+git clone https://github.com/ChalapathiRevanth/Toolchain toolchain
 
 #exports ::
 #toolchain , custom build_user , custom build_host , arch
 export ARCH=arm64
 export ARCH_MTK_PLATFORM=mt6735
-export CROSS_COMPILE=/datadrive2/android/repos/kernel/toolchain-4.9/bin/aarch64-linux-android-
+export CROSS_COMPILE=toolchain/bin/aarch64-linux-android-
 export KBUILD_BUILD_USER="nassreirma™"
 export KBUILD_BUILD_HOST="Deepin-OS"
 
